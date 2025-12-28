@@ -93,8 +93,7 @@ streamlit run app.py
 
 ## 👤 Yazar
 
-Programlama için Veri Bilimi Dersi Projesi
+Rana Özcan
 
 ---
 
-**Not:** wine.data dosyası app.py ile aynı klasörde olmalıdır.
