@@ -346,21 +346,10 @@ with tab7:
     col2.metric("Sınıf Sayısı", df["Class"].nunique())
     col3.metric("Ortalama Alkol", f"{df['Alcohol'].mean():.2f}")
 
-    # Burada feature_cols'ü tekrar kullanıyoruz, yukarıda tanımlandığı için erişilebilir
     feature_cols = [
-        "Alcohol",
-        "Malic_acid",
-        "Ash",
-        "Alcalinity_of_ash",
-        "Magnesium",
-        "Total_phenols",
-        "Flavanoids",
-        "Nonflavanoid_phenols",
-        "Proanthocyanins",
-        "Color_intensity",
-        "Hue",
-        "OD280_OD315",
-        "Proline",
+        "Alcohol", "Malic_acid", "Ash", "Alcalinity_of_ash", "Magnesium",
+        "Total_phenols", "Flavanoids", "Nonflavanoid_phenols",
+        "Proanthocyanins", "Color_intensity", "Hue", "OD280_OD315", "Proline",
     ]
 
     st.write("### Sınıfa Göre Ortalama Özellikler")
@@ -369,16 +358,14 @@ with tab7:
     col1, col2 = st.columns(2)
     with col1:
         st.write("**Sınıfa Göre Ortalama Alkol**")
-        mean_alcohol = df.groupby("Class")["Alcohol"].mean()
         fig, ax = plt.subplots(figsize=(6, 4))
-        mean_alcohol.plot(kind="bar", ax=ax)
+        df.groupby("Class")["Alcohol"].mean().plot(kind="bar", ax=ax)
         ax.set_ylabel("Mean Alcohol")
         st.pyplot(fig)
 
     with col2:
         st.write("**Sınıfa Göre Ortalama Proline**")
-        mean_proline = df.groupby("Class")["Proline"].mean()
         fig, ax = plt.subplots(figsize=(6, 4))
-        mean_proline.plot(kind="bar", ax=ax)
+        df.groupby("Class")["Proline"].mean().plot(kind="bar", ax=ax, color="orange")
         ax.set_ylabel("Mean Proline")
         st.pyplot(fig)
