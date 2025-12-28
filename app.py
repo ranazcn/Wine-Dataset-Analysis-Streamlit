@@ -346,6 +346,23 @@ with tab7:
     col2.metric("Sınıf Sayısı", df["Class"].nunique())
     col3.metric("Ortalama Alkol", f"{df['Alcohol'].mean():.2f}")
 
+    # Burada feature_cols'ü tekrar kullanıyoruz, yukarıda tanımlandığı için erişilebilir
+    feature_cols = [
+        "Alcohol",
+        "Malic_acid",
+        "Ash",
+        "Alcalinity_of_ash",
+        "Magnesium",
+        "Total_phenols",
+        "Flavanoids",
+        "Nonflavanoid_phenols",
+        "Proanthocyanins",
+        "Color_intensity",
+        "Hue",
+        "OD280_OD315",
+        "Proline",
+    ]
+
     st.write("### Sınıfa Göre Ortalama Özellikler")
     st.dataframe(df.groupby("Class")[feature_cols].mean().round(2))
 
@@ -362,9 +379,6 @@ with tab7:
         st.write("**Sınıfa Göre Ortalama Proline**")
         mean_proline = df.groupby("Class")["Proline"].mean()
         fig, ax = plt.subplots(figsize=(6, 4))
-        mean_proline.plot(kind="bar", ax=ax, color="orange")
+        mean_proline.plot(kind="bar", ax=ax)
         ax.set_ylabel("Mean Proline")
         st.pyplot(fig)
-
-  
-    
