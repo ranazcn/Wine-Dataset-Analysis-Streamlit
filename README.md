@@ -95,6 +95,7 @@ streamlit run app.py
 
 Rana Özcan
 0515220004
+https://wine-dataset-analysis-app-quycewoyqnfxkpaykvfq2d.streamlit.app
 
 ---
 
