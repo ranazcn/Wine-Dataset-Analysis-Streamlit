@@ -94,6 +94,7 @@ streamlit run app.py
 ## 👤 Yazar
 
 Rana Özcan
+0515220004
 
 ---
 
