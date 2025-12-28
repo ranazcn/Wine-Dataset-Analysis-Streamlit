@@ -366,15 +366,6 @@ with tab7:
         ax.set_ylabel("Mean Proline")
         st.pyplot(fig)
 
-    st.markdown("### Yorumlar (Rapor için kullanabilirsin)")
-    st.markdown(
-        """
-        - **Sınıf dağılımı**, veri setinde üç farklı şarap tipinin dengeli fakat tamamen eşit olmadığını gösterir.  
-        - **PCA analizi**, 13 boyutlu özellik uzayını 2 bileşene indirgerken sınıfların kısmen ayrışabildiğini gösterir; bu da
-          sınıflandırma algoritmalarının işe yarayabileceğini destekler.  
-        - **Random Forest modeli**, yüksek bir doğruluk oranı verebilir; feature importance sonuçları ise
-          hangi kimyasal özelliklerin sınıflandırmada daha belirleyici olduğunu görmemizi sağlar.  
-        - Dashboard kısmındaki ortalama alkol ve Proline değerleri, hangi sınıf şarapların görece daha yoğun ve güçlü
-          kimyasal yapıya sahip olduğunu göstermede kullanılabilir.
-        """
+  
+    
     )
